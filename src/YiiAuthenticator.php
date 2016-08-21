@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the yii2-simple-auth.
+ * This file is part of the yii2-simple-auth-yii-authenticator.
  *
  * Copyright (c) 2016 Robert Korulczyk <robert@korulczyk.pl>.
  *
