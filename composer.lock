@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ca5250f3be81d74504af2d2ebcedad65",
-    "content-hash": "02ee924496911f123e27a8a6d199ac14",
+    "hash": "f4075d0ec0ca3d5b8815549ee1eec74c",
+    "content-hash": "587f49fc95426e0e556291aa4ce06312",
     "packages": [
         {
             "name": "bower-asset/jquery",
@@ -252,26 +252,23 @@
         },
         {
             "name": "rob006/yii2-simple-auth",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rob006/yii2-simple-auth.git",
-                "reference": "d417685ee8215044c6e60c2f9e49d65b21061848"
+                "reference": "aeed00979f7f37001f4e3f96854aa3f93727002b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006/yii2-simple-auth/zipball/d417685ee8215044c6e60c2f9e49d65b21061848",
-                "reference": "d417685ee8215044c6e60c2f9e49d65b21061848",
+                "url": "https://api.github.com/repos/rob006/yii2-simple-auth/zipball/aeed00979f7f37001f4e3f96854aa3f93727002b",
+                "reference": "aeed00979f7f37001f4e3f96854aa3f93727002b",
                 "shasum": ""
             },
             "require": {
                 "yiisoft/yii2": "2.0.*"
             },
-            "require-dev": {
-                "yiisoft/yii2-httpclient": "^2.0.0"
-            },
             "suggest": {
-                "yiisoft/yii2-httpclient": "HTTP client supported by extension authenticator"
+                "rob006/yii2-simple-auth-yii-authenticator": "Helper for authenticate Request from yii2-httpclient package"
             },
             "type": "yii2-extension",
             "extra": {
@@ -302,7 +299,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2016-08-14 12:43:11"
+            "time": "2016-09-04 10:07:37"
         },
         {
             "name": "yiisoft/yii2",
@@ -496,9 +493,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "rob006/yii2-simple-auth": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

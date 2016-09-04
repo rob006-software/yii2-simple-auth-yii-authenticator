@@ -16,6 +16,7 @@ namespace rob006\simpleauth;
  * @see https://github.com/yiisoft/yii2-httpclient
  *
  * @author Robert Korulczyk <robert@korulczyk.pl>
+ * @since 1.0.0
  */
 class YiiAuthenticator extends Authenticator {
 
