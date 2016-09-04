@@ -5,7 +5,7 @@ Yii 2 extension that provides helper for authenticate `Request` from
 [yii2-httpclient](https://github.com/yiisoft/yii2-httpclient) package.
 
 This is a simple helper for [yii2-simple-auth](https://github.com/rob006/yii2-simple-auth) which
-simplyfy authenticating `Request` object from official Yii 2 httpclient extension.
+simplify authenticating `Request` object from official Yii 2 httpclient extension.
 Read [yii2-simple-auth README](https://github.com/rob006/yii2-simple-auth/blob/master/README.md#configuration)
 to get more details about authentication process and configuration.
 
