@@ -2,7 +2,7 @@ CHANGELOG
 =========
 
 
-1.0.1 (under development)
+1.0.1 (2017-04-06)
 -------------------------
 
 - Fix BC break in `yii2-httpclient` - `Request::getUrl()` returns URL without data.
