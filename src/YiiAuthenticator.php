@@ -11,8 +11,12 @@
 
 namespace rob006\simpleauth;
 
+use yii\base\InvalidParamException;
+use yii\httpclient\Request;
+
 /**
  * Helper class for authenticate \yii\httpclient\Request from yiisoft/yii2-httpclient.
+ *
  * @see https://github.com/yiisoft/yii2-httpclient
  *
  * @author Robert Korulczyk <robert@korulczyk.pl>
@@ -22,15 +26,16 @@ class YiiAuthenticator extends Authenticator {
 
 	/**
 	 * {@inheritdoc}
-	 * Handle \yii\httpclient\Request from yiisoft/yii2-httpclient.
-	 * @see https://github.com/yiisoft/yii2-httpclient
 	 *
-	 * @param \yii\httpclient\Request $request Request object.
+	 * Handle `\yii\httpclient\Request` from `yiisoft/yii2-httpclient`.
+	 *
+	 * @param Request $request Request object.
 	 * @param string $method
 	 * @param string $secret Secret key used for generate token. Leave empty to use secret from
-	 * config (Yii::$app->params['simpleauth']['secret']).
-	 * @return \yii\httpclient\Request Authenticated Request object.
-	 * @throws \yii\base\InvalidParamException
+	 * config (`Yii::$app->params['simpleauth']['secret']`).
+	 * @return Request Authenticated Request object.
+	 * @throws InvalidParamException
+	 * @see https://github.com/yiisoft/yii2-httpclient
 	 */
 	public static function authenticate($request, $method = self::METHOD_HEADER, $secret = null) {
 		return parent::authenticate($request, $method, $secret);
@@ -38,12 +43,14 @@ class YiiAuthenticator extends Authenticator {
 
 	/**
 	 * {@inheritdoc}
-	 * Require \yii\httpclient\Request from yiisoft/yii2-httpclient.
+	 *
+	 * Require `\yii\httpclient\Request` from yiisoft/yii2-httpclient.
+	 *
 	 * @see https://github.com/yiisoft/yii2-httpclient
 	 */
 	protected function validateRequest() {
-		if (!($this->request instanceof \yii\httpclient\Request)) {
-			throw new \yii\base\InvalidParamException('$request should be instance of \yii\httpclient\Request');
+		if (!($this->request instanceof Request)) {
+			throw new InvalidParamException('$request should be instance of \yii\httpclient\Request');
 		}
 	}
 
@@ -51,9 +58,10 @@ class YiiAuthenticator extends Authenticator {
 	 * {@inheritdoc}
 	 */
 	protected function authenticateByHeader() {
+		/* @var $copy Request */
 		$copy = clone $this->request;
 		return $this->request->addHeaders([
-					static::HEADER_NAME => static::generateAuthToken($copy->prepare()->getUrl(), $this->secret),
+			static::HEADER_NAME => static::generateAuthToken($copy->prepare()->getFullUrl(), $this->secret),
 		]);
 	}
 
@@ -61,10 +69,11 @@ class YiiAuthenticator extends Authenticator {
 	 * {@inheritdoc}
 	 */
 	protected function authenticateByGetParam() {
+		/* @var $copy Request */
 		$copy = clone $this->request;
 		$this->request->setMethod('get');
 		return $this->request->setData(array_merge((array) $this->request->data, [
-					static::PARAM_NAME => static::generateAuthToken($copy->prepare()->getUrl(), $this->secret),
+			static::PARAM_NAME => static::generateAuthToken($copy->prepare()->getFullUrl(), $this->secret),
 		]));
 	}
 
@@ -73,9 +82,10 @@ class YiiAuthenticator extends Authenticator {
 	 */
 	protected function authenticateByPostParam() {
 		$this->request->setMethod('post');
+		/* @var $copy Request */
 		$copy = clone $this->request;
 		return $this->request->setData(array_merge((array) $this->request->data, [
-					static::PARAM_NAME => static::generateAuthToken($copy->prepare()->getUrl(), $this->secret),
+			static::PARAM_NAME => static::generateAuthToken($copy->prepare()->getFullUrl(), $this->secret),
 		]));
 	}
 

@@ -16,8 +16,8 @@
 		"source": "https://github.com/rob006/yii2-simple-auth-yii-authenticator"
 	},
 	"require": {
-		"yiisoft/yii2": "2.0.*",
-		"yiisoft/yii2-httpclient": "2.0.*",
+		"yiisoft/yii2": "~2.0.9",
+		"yiisoft/yii2-httpclient": "~2.0.1",
 		"rob006/yii2-simple-auth": "^1.0"
 	},
 	"autoload": {
