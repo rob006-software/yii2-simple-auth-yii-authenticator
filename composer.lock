@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "978adff0c9f39945deac8e411834c9d5",
     "content-hash": "6e19087afab53da4a63767390ee094f2",
     "packages": [
         {
@@ -211,7 +210,7 @@
                 "markdown",
                 "markdown-extra"
             ],
-            "time": "2016-09-14 20:40:20"
+            "time": "2016-09-14T20:40:20+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -258,19 +257,19 @@
             "keywords": [
                 "html"
             ],
-            "time": "2017-03-13 06:30:53"
+            "time": "2017-03-13T06:30:53+00:00"
         },
         {
             "name": "rob006/yii2-simple-auth",
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rob006/yii2-simple-auth.git",
+                "url": "https://github.com/rob006-software/yii2-simple-auth.git",
                 "reference": "aeed00979f7f37001f4e3f96854aa3f93727002b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rob006/yii2-simple-auth/zipball/aeed00979f7f37001f4e3f96854aa3f93727002b",
+                "url": "https://api.github.com/repos/rob006-software/yii2-simple-auth/zipball/aeed00979f7f37001f4e3f96854aa3f93727002b",
                 "reference": "aeed00979f7f37001f4e3f96854aa3f93727002b",
                 "shasum": ""
             },
@@ -309,7 +308,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2016-09-04 10:07:37"
+            "time": "2016-09-04T10:07:37+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -409,7 +408,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2017-02-08 09:04:32"
+            "time": "2017-02-08T09:04:32+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -459,7 +458,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2016-12-20 13:26:02"
+            "time": "2016-12-20T13:26:02+00:00"
         },
         {
             "name": "yiisoft/yii2-httpclient",
@@ -506,7 +505,7 @@
                 "httpclient",
                 "yii2"
             ],
-            "time": "2017-02-15 14:28:10"
+            "time": "2017-02-15T14:28:10+00:00"
         }
     ],
     "packages-dev": [],
